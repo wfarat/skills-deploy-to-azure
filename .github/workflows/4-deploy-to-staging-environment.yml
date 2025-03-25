@@ -6,11 +6,7 @@ name: Step 4, Deploy to staging
 # completes on the staging-test branch
 # Reference: https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
 on:
-  workflow_dispatch:
-  workflow_run:
-    workflows: ["Deploy to staging"]
-    types: [completed]
-    branches: [staging-test]
+  push
 
 permissions:
   # Need `contents: read` to checkout the repository.
